@@ -9,8 +9,6 @@ input, button { margin: 0; padding: 0; }
 /* Custom */
 
 /* PC Header */
-.pc-header-blank { display: none; width: 100%; height: 100px; }
-.pc-header-blank.fill { display: block; }
 .pc-header { position: relative; background-color: #2d0a31; transition: .3s;}
 .pc-header > img { 
   position: absolute;
@@ -18,29 +16,21 @@ input, button { margin: 0; padding: 0; }
   left: 0;
 }
 .header-container { 
-  position: static;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  height: 100px; 
   color: #fff;
   background-color: #2d0a31;
   transition: .3s; 
 }
-.header-container.setPosition { position: fixed; opacity: 0; transform: translateY(-50px); }
-.header-container.fix { 
-  position: fixed; 
-  top: 0; 
-  left: 0;
-  margin: 0 auto; 
-  z-index: 1; 
-  opacity: 1; 
-  transform: translateY(0);
-  background-color: #4c1e51;
-}
+.header-container.sticky { position: fixed; left: 0; top: 0; z-index: 1; padding: 20px; transition: .3s;}
 .header-container > div { display: flex; height: 100%; align-items: center; }
 .navigation { display: flex; height: 100%; margin: 0 20px; line-height: 100px; }
 .navigation > li { margin: 0 15px; text-align: left; }
@@ -88,32 +78,30 @@ input, button { margin: 0; padding: 0; }
 
 /* Mobile Header */
 .mobile-header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100px;
+  width: 100%;  
+  padding: 10px 0;
   display: none;
-  height: 85px;
   background-color: #2d0a31;
   transition: .3s;
 }
-.mobile-header.setPosition { position: fixed; z-index: 1; opacity: 0; transform: translateY(-50px); }
-.mobile-header.fix { 
-  position: fixed; 
-  top: 0; 
-  left: 0; z-index: 1;
-  width: 480px;
-  height: 85px;
-  z-index: 1; 
-  opacity: 1; 
-  transform: translateY(0);
-  background-color: #4c1e51;
+.mobile-header.sticky { position: fixed; width: 480px; height: 100px; top: 0; left: 0; z-index: 1;   background-color: #4c1e51;
 }
-.mobile-logo,
-.mobile-trigger {
-  position: absolute;
+.mobile-logo { 
+  position: absolute; 
+  left: 20px; 
   top: 50%;
   transform: translateY(-50%);
 }
-.mobile-logo { left: 20px; }
 .mobile-trigger { 
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
   right: 30px; 
   width: 30px;
   height: 30px;
