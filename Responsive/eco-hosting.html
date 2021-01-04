@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="./eco-hosting.css">
+  <link rel="stylesheet" href="./eco-hosting-responsive.css">
   <script src="eco-hosting.js" defer></script>
   <title>Eco-hosting</title>
 </head>
 <body>
   <!-- PC Header -->
+  <div class="pc-header-blank"></div>
   <header class="pc-header">
     <img src="./images/top-left-shape.png" alt="square">
     <div class="header-container">
@@ -35,14 +37,41 @@
     </div>
   </header>
   <!-- Mobile Header -->
+  <div class="mobile-header-blank"></div>
   <header class="mobile-header">
-    <a href="#none"><img src="./images/logo.png" alt="header-logo"></a>
+    <a href="#none" class="mobile-logo"><img src="./images/logo.png" alt="header-logo"></a>
+    <a href="#none" class="mobile-trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <ul class="mobile-submenu">
+      <li><a href="#none">Home</a></li>
+      <li><a href="#none">Packages</a></li>
+      <li><a href="#none">Help</a></li>
+      <li class="submenu-blog">
+        <a href="#none">Blog 
+          <a href="#none" class="blog-trigger">
+            <span></span>
+            <span></span>
+          </a>
+        </a>
+      </li>
+      <div class="blog-dropdown">
+        <a href="#none">Blog</a>
+        <a href="#none">Blog Details</a>
+        <a href="#none">Element</a>
+      </div>
+      <li><a href="#none">Contact</a></li>
+      <a href="#none">Sign Up</a>
+      <a href="#none">Sign In</a>
+    </ul>
   </header>
   <section class="welcome">
     <div class="welcome-container">
       <div class="welcome-text">
-        <span>Best Domain & hosting service provide</span>
-        <h1>Powerful web<br>hosting</h1>
+        <span>Best Domain & hosting service provider</span>
+        <h1>Powerful web hosting</h1>
         <p>
           Supercharge your WordPress hosting with detailed website analytics, marketing tools, security, and data backups all in one place.
         </p>
@@ -115,7 +144,7 @@
   </section>
   <section class="price">
     <div class="price-container">
-      <h1>Choose plan which fit for you<p>Supercharge your WordPress hosting with deatiled ewebsite analytics, marketing tools. Our experts are just part of the reason Bluehost is the ideal home for your WordPress website. We're here to help you succeed!</p></h1>
+      <h1>Choose plan which fit for you<p>Supercharge your WordPress hosting with detailed ewebsite analytics, marketing tools. Our experts are just part of the reason Bluehost is the ideal home for your WordPress website. We're here to help you succeed!</p></h1>
       <div class="price-tag">
         <img src="./images/price1.svg" alt="price">
         <h3>Shared Hosting</h3>
@@ -136,7 +165,7 @@
       </div>
       <div class="price-tag">
         <img src="./images/price2.svg" alt="price">
-        <h3>Delicated Hosting</h3>
+        <h3>Dedicated Hosting</h3>
         <span>
           <p>Starting at</p>
           <b>$4.67</b>
@@ -290,7 +319,7 @@
     <div class="footer-container">
       <div>
         <div class="subscribe">
-          <img src="/images/logo.png" alt="footer-logo">
+          <img src="./images/logo.png" alt="footer-logo">
           <p>Subscribe our newsletter to get updates about our services</p>
           <a href="#none">Email Address</a>
           <a href="#none">Subscribe</a>
